@@ -16,8 +16,8 @@ const Project = () => {
         Projects
       </h2>
       <p className="text-center text-md sm:text-lg">
-        I love building projects and practice my engineering skills, here's are
-        some of my project that I've worked on and you can check all of my
+        I love building projects and practice my engineering skills, here&apos;s are
+        some of my project that I&apos;ve worked on and you can check all of my
         projects by visiting My{" "}
         <Link href={"https://github.com/shahnawaz46"}>Github</Link>.
       </p>

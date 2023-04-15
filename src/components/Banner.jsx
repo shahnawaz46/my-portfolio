@@ -10,7 +10,7 @@ const Banner = () => {
     <div className="h-[88vh]" id="">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center text-white px-3">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">
-          Hi I'm <br className="sm:hidden" />
+          Hi I&apos;m <br className="sm:hidden" />
           Mohammad Shahnawaz
         </h1>
         <TypeAnimation
