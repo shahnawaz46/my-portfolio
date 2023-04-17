@@ -10,6 +10,8 @@
 
 html{
   scroll-behavior: smooth;
+  scroll-padding-top: 125px;
+  min-height: 100%;
 }
 
 *{

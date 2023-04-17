@@ -5,10 +5,15 @@ import ChatAppImage from "@/assets/chat-app.png";
 import EcommerceImage from "@/assets/Ecommerce.png";
 import PasswordSaverImage from "@/assets/Password-Saver.png";
 import MusicPlayerImage from "@/assets/Music-player.png";
+import { motion } from "framer-motion";
 
 const Project = () => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+      viewport={{once:true, amount:0.1}}
       id="project"
       className="relative text-white px-3 sm:px-16 w-full h-fit mt-20"
     >
@@ -16,9 +21,9 @@ const Project = () => {
         Projects
       </h2>
       <p className="text-center text-md sm:text-lg">
-        I love building projects and practice my engineering skills, here&apos;s are
-        some of my project that I&apos;ve worked on and you can check all of my
-        projects by visiting My{" "}
+        I love building projects and practice my engineering skills, here&apos;s
+        are some of my project that I&apos;ve worked on and you can check all of
+        my projects by visiting My{" "}
         <Link href={"https://github.com/shahnawaz46"}>Github</Link>.
       </p>
 
@@ -83,7 +88,7 @@ const Project = () => {
           }
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

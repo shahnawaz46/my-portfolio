@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ProgrammerImage from "@/assets/programmer.png";
+import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 const About = () => {
   return (
-    <div id="about" className="relative text-white px-3 sm:px-16 w-full h-fit">
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+      viewport={{ once: true }}
+      id="about"
+      className="relative text-white px-3 sm:px-16 w-full h-fit"
+    >
       <div className="flex justify-center md:absolute md:-top-12 md:left-16 lg:left-36">
         <img
           src={ProgrammerImage.src}
@@ -25,10 +34,10 @@ const About = () => {
           Everything i learn about coding like Mern Stack, Python, Django, C++,
           web development and app develpment by My Self.
           <br />
-          <br />I am BCA degree holder from XYZ College.
+          {/* <br />I am BCA degree holder from XYZ College. */}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

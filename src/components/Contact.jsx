@@ -2,10 +2,16 @@ import Link from "next/link";
 import React from "react";
 import { AiFillInstagram, AiOutlineMail } from "react-icons/ai";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0}}
+      whileInView={{ opacity: 1}}
+      transition={{ duration: 0.7 }}
+      viewport={{ once: true }}
+      // viewport={{once:false,amount:1}}
       id="contact"
       className="relative text-white px-3 sm:px-16 w-full h-fit mt-20"
     >
@@ -14,7 +20,8 @@ const Contact = () => {
       </h2>
       <p className="text-center text-md sm:text-lg">
         If you have an exciting opportunity for me, or if you have any Query, or
-        if you want to talk with me, <br className="hidden sm:block" /> feel free to reach out!
+        if you want to talk with me, <br className="hidden sm:block" /> feel
+        free to reach out!
       </p>
       <div className="flex items-center justify-center flex-wrap gap-3 md:gap-4 mt-8">
         <Link
@@ -42,9 +49,10 @@ const Contact = () => {
       <div className="mt-16 mb-4 text-center text-md sm:text-lg">
         Designed and Developed by{" "}
         <span className="text-[#3CCF91]">Mohammad Shahnawaz</span>. <br /> Built
-        with <span className="text-[#3CCF91]">Next.js</span> & <span className="text-[#3CCF91]">Tailwind Css</span>.
+        with <span className="text-[#3CCF91]">Next.js</span> &{" "}
+        <span className="text-[#3CCF91]">Tailwind Css</span>.
       </div>
-    </div>
+    </motion.div>
   );
 };
 
