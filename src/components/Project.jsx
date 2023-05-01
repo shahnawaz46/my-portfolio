@@ -51,7 +51,7 @@ const Project = () => {
           gitHubLink={
             "https://github.com/shahnawaz46/fuzicon-frontend-in-reactjs"
           }
-          websiteLink={"https://froweb-ecommerce.netlify.app/"}
+          websiteLink={"https://fuzicon-ecommerce.netlify.app/"}
           stack={[
             { id: 1, name: "Mern Stack" },
             { id: 2, name: "Redux" },

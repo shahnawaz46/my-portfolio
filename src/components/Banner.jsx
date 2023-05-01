@@ -28,9 +28,11 @@ const Banner = () => {
           className="text-xl sm:text-2xl"
           // style={{ fontSize: "20px" }}
         />
+
+        {/* social links */}
         <div className="flex items-center justify-center gap-3 md:gap-4 mt-4">
           <Link
-            href={"https://www.linkedin.com/in/mohd-shahnawaz-7ab868228"}
+            href={"https://www.linkedin.com/in/mohd-shahnawaz-8z"}
             target="_blank"
           >
             <BsLinkedin className="text-[22px] cursor-pointer text-[#3CCF91]" />

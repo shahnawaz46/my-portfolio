@@ -25,7 +25,7 @@ const Contact = () => {
       </p>
       <div className="flex items-center justify-center flex-wrap gap-3 md:gap-4 mt-8">
         <Link
-          href={"https://www.linkedin.com/in/mohd-shahnawaz-7ab868228"}
+          href={"https://www.linkedin.com/in/mohd-shahnawaz-8z"}
           target="_blank"
         >
           <div className="bg-white hover:bg-blue-100  flex items-center gap-2 py-1 px-4 rounded-md">
