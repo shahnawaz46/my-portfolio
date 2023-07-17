@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
-import ProgrammerImage from "@/assets/programmer.png";
+'use client'
+
+import React from "react";
+import ProgrammerImage from "../assets/programmer.png";
 import { motion } from "framer-motion";
-import { useRouter } from "next/router";
 
 const About = () => {
   return (
@@ -13,11 +14,11 @@ const About = () => {
       id="about"
       className="relative text-white px-3 sm:px-16 w-full h-fit"
     >
-      <div className="flex justify-center md:absolute md:-top-12 md:left-16 lg:left-36">
+      <div className="flex justify-center md:absolute md:-top-12 md:left-16 lg:left-44">
         <img
           src={ProgrammerImage.src}
           alt="profile-image"
-          className="w-48 sm:w-40 md:w-52 lg:w-60 h-48 sm:h-40 md:h-52 lg:h-60 object-cover rounded-[50%] md:rounded-lg z-10 shadow-2xl"
+          className="w-48 sm:w-40 md:w-52 h-48 sm:h-40 md:h-52 object-cover rounded-[50%] md:rounded-lg z-10 shadow-2xl"
         />
       </div>
 

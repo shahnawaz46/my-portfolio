@@ -1,14 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
-import { AiFillInstagram, AiOutlineMail } from "react-icons/ai";
+import { AiOutlineMail } from "react-icons/ai";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
     <motion.div
-      initial={{ opacity: 0}}
-      whileInView={{ opacity: 1}}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       transition={{ duration: 0.7 }}
       viewport={{ once: true }}
       // viewport={{once:false,amount:1}}
@@ -25,7 +27,7 @@ const Contact = () => {
       </p>
       <div className="flex items-center justify-center flex-wrap gap-3 md:gap-4 mt-8">
         <Link
-          href={"https://www.linkedin.com/in/mohd-shahnawaz-8z"}
+          href={"https://www.linkedin.com/in/mohammad-shahnawaz-8z"}
           target="_blank"
         >
           <div className="bg-white hover:bg-blue-100  flex items-center gap-2 py-1 px-4 rounded-md">
@@ -49,7 +51,7 @@ const Contact = () => {
       <div className="mt-16 mb-4 text-center text-md sm:text-lg">
         Designed and Developed by{" "}
         <span className="text-[#3CCF91]">Mohammad Shahnawaz</span>. <br /> Built
-        with <span className="text-[#3CCF91]">Next.js</span> &{" "}
+        with <span className="text-[#3CCF91]">Next.js 13</span> &{" "}
         <span className="text-[#3CCF91]">Tailwind Css</span>.
       </div>
     </motion.div>

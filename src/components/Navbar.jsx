@@ -1,20 +1,23 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { AiOutlineClose } from "react-icons/ai";
 import { BiMenuAltRight } from "react-icons/bi";
-import { useRouter } from "next/router";
+import { useParams, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { name: "Home", link: "" },
-  { name: "About", link: "#about" },
-  { name: "Skills", link: "#skill" },
-  // { name: "Work", link: "#work" },
-  { name: "Project", link: "#project" },
+  { name: "About", link: "/#about" },
+  { name: "Skills", link: "/#skill" },
+  // { name: "Work", link: "/#work" },
+  { name: "Project", link: "/#project" },
 ];
 
 const Navbar = () => {
-  const { asPath } = useRouter();
-  // console.log(asPath);
+  const pathname = usePathname();
+  const router = useRouter()
   const [showNavbar, setShowNavbar] = useState(false);
   const [navbarBackground, setNavbarBackground] = useState(false);
 
@@ -29,9 +32,10 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    asPath === "/" && window.scrollTo(0, 0);
-  }, [asPath]);
+  // useEffect(() => {
+  //   console.log("pathname: ", pathname);
+  //   pathname === "/" && window.scrollTo(0, 0);
+  // }, [pathname]);
 
   return (
     <div
@@ -62,13 +66,11 @@ const Navbar = () => {
           <div
             key={index}
             className={`text-xl sm:text-lg ${
-              asPath === `/${item.link}` &&
+              pathname === `${item.link}` &&
               "underline underline-offset-4 decoration-[#3CCF91]"
             } sm:hover:underline sm:hover:decoration-[#3CCF91] sm:hover:underline-offset-4`}
           >
-            <Link href={item.link} scroll={false}>
-              {item.name}
-            </Link>
+            <Link href={item.link}>{item.name}</Link>
           </div>
         ))}
       </nav>

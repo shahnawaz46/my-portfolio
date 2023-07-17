@@ -1,9 +1,9 @@
 import React from "react";
-import { TypeAnimation } from "react-type-animation";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { AiFillInstagram, AiOutlineDownload } from "react-icons/ai";
 import { IoMdCall } from "react-icons/io";
 import Link from "next/link";
+import TypeTextAnimation from "./TypeTextAnimation";
 
 const Banner = () => {
   return (
@@ -13,26 +13,13 @@ const Banner = () => {
           Hi I&apos;m <br className="sm:hidden" />
           Mohammad Shahnawaz
         </h1>
-        <TypeAnimation
-          sequence={[
-            "Software Engineer",
-            1000,
-            "Front end Developer",
-            1000,
-            "Mern Stack Developer",
-            1000,
-          ]}
-          repeat={Infinity}
-          cursor={true}
-          wrapper="span"
-          className="text-xl sm:text-2xl"
-          // style={{ fontSize: "20px" }}
-        />
+
+        <TypeTextAnimation />
 
         {/* social links */}
         <div className="flex items-center justify-center gap-3 md:gap-4 mt-4">
           <Link
-            href={"https://www.linkedin.com/in/mohd-shahnawaz-8z"}
+            href={"https://www.linkedin.com/in/mohammad-shahnawaz-8z"}
             target="_blank"
           >
             <BsLinkedin className="text-[22px] cursor-pointer text-[#3CCF91]" />
@@ -45,7 +32,7 @@ const Banner = () => {
         <div className="flex justify-center items-center gap-3 mt-5">
           <Link
             href={
-              "https://drive.google.com/file/d/1MzVeuszQpBCUeTvMZV0QRSCC2q0p1vEU/view?usp=share_link"
+              "https://drive.google.com/file/d/1pkGk8CmUf14bT4tQUFOP2CEYJEPRQzeZ/view?usp=drive_link"
             }
             target="_blank"
             className="flex items-center justify-evenly w-32 xs:w-36 text-md border-2 border-[#3CCF91] rounded-3xl p-1 cursor-pointer hover:bg-[#3CCF91]"
@@ -55,7 +42,7 @@ const Banner = () => {
           </Link>
 
           <Link
-           href={"#contact"}
+            href={"#contact"}
             scroll={false}
             className="flex items-center justify-evenly w-32 xs:w-36 text-md border-2 border-[#3CCF91] rounded-3xl p-1 cursor-pointer hover:bg-[#3CCF91]"
           >

@@ -1,10 +1,12 @@
+'use client'
+
 import React from "react";
 import Link from "next/link";
 import ProjectCard from "./ProjectCard";
-import ChatAppImage from "@/assets/chat-app.png";
-import EcommerceImage from "@/assets/Ecommerce.png";
-import PasswordSaverImage from "@/assets/Password-Saver.png";
-import MusicPlayerImage from "@/assets/Music-player.png";
+import ChatAppImage from "../assets/chat-app.png";
+import EcommerceImage from "../assets/Ecommerce.png";
+import PasswordSaverImage from "../assets/Password-Saver.png";
+import MusicPlayerImage from "../assets/Music-player.png";
 import { motion } from "framer-motion";
 
 const Project = () => {
