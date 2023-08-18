@@ -4,9 +4,6 @@
 
 html {
   scroll-behavior: smooth !important;
-  scroll-padding-top: 125px !important;
-  scroll-margin-top: 125px;
-  min-height: 100%;
 }
 
 * {

@@ -1,71 +1,31 @@
-'use client'
+"use client";
 
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  ReactjsIcon,
-  NextjsIcon,
-  ReduxIcon,
-  JavacriptIcon,
-  HtmlIcon,
-  CssIcon,
-  SassIcon,
-  TailwindCssIcon,
-  MaterialUiIcon,
-  FramerMotionIcon,
-  NodejsIcon,
-  ExpressjsIcon,
-  DjangoIcon,
-  MongodbIcon,
-  GitIcon,
-  GithubIcon,
-} from "./SkillsIcons";
-
-const skillIcons = [
-  { id: 101, icon: ReactjsIcon.src, name: "React.js" },
-  { id: 102, icon: NextjsIcon.src, name: "Next.js" },
-  { id: 103, icon: ReduxIcon.src, name: "Redux" },
-  { id: 104, icon: JavacriptIcon.src, name: "Javascript" },
-  { id: 105, icon: HtmlIcon.src, name: "HTML5" },
-  { id: 106, icon: CssIcon.src, name: "CSS3" },
-  { id: 107, icon: SassIcon.src, name: "SASS" },
-  { id: 108, icon: TailwindCssIcon.src, name: "Tailwind" },
-  { id: 109, icon: MaterialUiIcon.src, name: "MUI" },
-  { id: 110, icon: FramerMotionIcon.src, name: "Framer" },
-  { id: 111, icon: NodejsIcon.src, name: "Node.js" },
-  { id: 112, icon: ExpressjsIcon.src, name: "Express.js" },
-  { id: 113, icon: DjangoIcon.src, name: "Django" },
-  { id: 114, icon: MongodbIcon.src, name: "Mongodb" },
-  { id: 115, icon: GitIcon.src, name: "Git" },
-  { id: 116, icon: GithubIcon.src, name: "Github" },
-];
+import { skills } from "../lib/data";
+import SectionHeading from "./SectionHeading";
+import SectionParagraph from "./SectionParagraph";
 
 const Skills = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 100 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7 }}
-      viewport={{ once: true, amount: 0.2 }}
+    <div
       id="skill"
-      className="relative text-white px-3 sm:px-16 w-full h-full md:mt-16"
+      className="scroll-m-16 relative text-white px-3 sm:px-16 w-full h-full md:mt-16"
     >
-      <h2 className="text-3xl text-[#3CCF91] text-center mb-2 font-medium">
-        My Skills
-      </h2>
-      <p className="text-center text-md sm:text-lg">
+      <SectionHeading>My Skills</SectionHeading>
+      <SectionParagraph>
         The Skills, tools and technology that i use to make the projects.
-      </p>
+      </SectionParagraph>
       <div className="flex items-center justify-center gap-3 flex-wrap mt-4">
-        {skillIcons.map((item) => (
+        {skills.map((item, index) => (
           <motion.div
-            whileHover={{
-              scale: 1.07,
-              transition: { duration: 0.5 },
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{
+              delay: 0.08 * index,
             }}
-            whileTap={{
-              scale: 1.07,
-              transition: { duration: 0.5 },
+            viewport={{
+              once: true,
             }}
             onContextMenu={(e) => e.preventDefault()}
             key={item.id}
@@ -76,7 +36,7 @@ const Skills = () => {
           </motion.div>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 };
 
