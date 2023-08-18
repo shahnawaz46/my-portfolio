@@ -4,8 +4,8 @@ import React, { useRef } from 'react';
 import Link from 'next/link';
 import { RiShareBoxFill } from 'react-icons/ri';
 import { AiFillGithub } from 'react-icons/ai';
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
-import type { projectDetails } from '../lib/data';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { projectDetails } from '../lib/data';
 
 type projectProps = (typeof projectDetails)[number];
 

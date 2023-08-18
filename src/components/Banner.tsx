@@ -7,10 +7,12 @@ import { IoMdCall } from 'react-icons/io';
 import Link from 'next/link';
 import TypeTextAnimation from './TypeTextAnimation';
 import { motion } from 'framer-motion';
+import { useSectionInView } from '../lib/hooks';
 
 const Banner = () => {
+  const { ref } = useSectionInView('Home');
   return (
-    <div className="h-screen">
+    <div className="h-screen" ref={ref}>
       <motion.div
         initial={{ y: 100, x: '-50%', opacity: 0 }}
         animate={{ y: '-50%', x: '-50%', opacity: 1 }}

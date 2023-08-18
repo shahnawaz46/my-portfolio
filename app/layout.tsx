@@ -1,12 +1,13 @@
-import "@/styles/globals.css";
-import type { Metadata } from "next";
-import ReactParticle from "@/src/components/ReactParticle";
-import Navbar from "@/src/components/Navbar";
-import { childrenProps } from "@/src/interfaces/Interface";
+import '@/styles/globals.css';
+import type { Metadata } from 'next';
+import ReactParticle from '@/src/components/ReactParticle';
+import Navbar from '@/src/components/Navbar';
+import { childrenProps } from '@/src/interfaces/Interface';
+import ActiveSectionContextProvider from '@/src/context/ActiveSectionContext';
 
 export const metadata: Metadata = {
-  title: "Shahnawaz",
-  description: "This is my Protfolio Website",
+  title: 'Shahnawaz',
+  description: 'This is my Protfolio Website',
 };
 
 export default function RootLayout({ children }: childrenProps) {
@@ -14,8 +15,10 @@ export default function RootLayout({ children }: childrenProps) {
     <html lang="en">
       <body>
         <ReactParticle />
-        <Navbar />
-        <main>{children}</main>
+        <ActiveSectionContextProvider>
+          <Navbar />
+          <main>{children}</main>
+        </ActiveSectionContextProvider>
       </body>
     </html>
   );

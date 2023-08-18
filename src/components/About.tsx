@@ -4,10 +4,13 @@ import React from 'react';
 import ProgrammerImage from '../assets/programmer.png';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useSectionInView } from '../lib/hooks';
 
 const About = () => {
+  const { ref } = useSectionInView('About', 0.8);
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.7 }}

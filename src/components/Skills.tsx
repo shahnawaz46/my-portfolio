@@ -1,14 +1,18 @@
-"use client";
+'use client';
 
-import React from "react";
-import { motion } from "framer-motion";
-import { skills } from "../lib/data";
-import SectionHeading from "./SectionHeading";
-import SectionParagraph from "./SectionParagraph";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { skills } from '../lib/data';
+import SectionHeading from './SectionHeading';
+import SectionParagraph from './SectionParagraph';
+import { useSectionInView } from '../lib/hooks';
 
 const Skills = () => {
+  const { ref } = useSectionInView('Skills', 0.8);
+
   return (
     <div
+      ref={ref}
       id="skill"
       className="scroll-m-16 relative text-white px-3 sm:px-16 w-full h-full md:mt-16"
     >

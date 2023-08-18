@@ -1,63 +1,23 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { AiOutlineClose } from 'react-icons/ai';
 import { BiMenuAltRight } from 'react-icons/bi';
-import { useScroll } from 'framer-motion';
 import { motion } from 'framer-motion';
 import { navbarItems } from '../lib/data';
+import { useActiveSectionContext } from '../context/ActiveSectionContext';
 
 const Navbar = () => {
+  const { activeLink, setActiveLink } = useActiveSectionContext();
   const [showNavbar, setShowNavbar] = useState(false);
-  const [navbarBackground, setNavbarBackground] = useState(false);
-  const [navbarUnderline, setNavbarUnderline] = useState(0);
-  const { scrollYProgress } = useScroll();
-  // console.log(scrollYProgress);
-
-  const onScrollLogic = () => {
-    if (window.scrollY > 80) setNavbarBackground(true);
-    else setNavbarBackground(false);
-
-    const { scrollY } = window;
-    // console.log('scrollY', scrollY);
-    setNavbarUnderline(scrollY);
-  };
-
-  const throttle = (cb: () => void, delay: number) => {
-    let wait: boolean = false;
-    // console.log('throttle : ', wait);
-    return () => {
-      // console.log('return : ', wait);
-      if (!wait) {
-        cb();
-        wait = true;
-        setTimeout(function () {
-          wait = false;
-        }, delay);
-      }
-    };
-  };
-
-  const onScroll = throttle(onScrollLogic, 500);
-
-  // useEffect(() => {
-  //   window.addEventListener('scroll', onScroll);
-  //   return () => window.removeEventListener('scroll', onScroll);
-  // }, []);
-
-  // useEffect(() => {
-  //   console.log("pathname: ", pathname);
-  //   pathname === "/" && window.scrollTo(0, 0);
-  // }, [pathname]);
 
   return (
     <motion.div
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className={`fixed top-0 z-20 w-full text-white ${
-        navbarBackground && 'bg-black bottom-8'
-      } flex justify-between items-center h-16 px-3 sm:p-5 md:px-12 lg:px-24`}
+      className={`fixed top-0 z-20 w-full text-white bg-black bg-opacity-30 backdrop-blur-[3px] bottom-8
+       flex justify-between items-center h-16 px-3 sm:p-5 md:px-12 lg:px-24`}
     >
       <h1 className="text-3xl">
         {' '}
@@ -81,7 +41,11 @@ const Navbar = () => {
         {navbarItems.map((item, index) => (
           <div
             key={index}
-            className={`text-xl sm:text-lg  sm:hover:underline sm:hover:decoration-[#3CCF91] sm:hover:underline-offset-4`}
+            className={`text-xl sm:text-lg ${
+              activeLink === item.name &&
+              'underline underline-offset-4 decoration-[#3CCF91]'
+            } sm:hover:underline sm:hover:decoration-[#3CCF91] sm:hover:underline-offset-4`}
+            onClick={() => setActiveLink(item.name)}
           >
             <Link href={item.link}>{item.name}</Link>
           </div>
