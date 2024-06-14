@@ -1,9 +1,7 @@
 'use client';
 
 import React from 'react';
-import ProgrammerImage from '../assets/programmer.png';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { useSectionInView } from '../lib/hooks';
 
 const About = () => {
@@ -15,30 +13,24 @@ const About = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.7 }}
       viewport={{ once: true }}
-      id="about"
-      className="scroll-m-32 relative text-white px-3 sm:px-16 w-full h-fit"
+      id='about'
+      className='scroll-m-32 relative text-white px-3 sm:px-16 w-full h-fit flex justify-center'
     >
-      <div className="w-48 sm:w-40 md:w-48 h-48 sm:h-40 md:h-48 relative left-1/2 -translate-x-1/2 md:translate-x-0  md:absolute md:-top-12 md:left-16 lg:left-44 z-10">
-        <Image
-          src={ProgrammerImage.src}
-          alt="profile-image"
-          fill
-          className=" object-cover rounded-[50%] md:rounded-lg  shadow-2xl"
-        />
-      </div>
-
-      <div className=" bg-[#2a4942] rounded-md pt-28 md:pt-6 pb-6 px-4 md:pl-16 relative -top-24 md:top-0 md:ml-36 lg:ml-64 md:mt-20 shadow-xl">
-        <h2 className="text-3xl text-[#3CCF91] mb-2 font-medium">About us</h2>
-        <p className=" text-[white] text-md sm:text-lg">
-          Hy Myself Mohammad Shahnawaz. A Software Engineer mainly focused on
-          Development. I really like to develop web apps and mobile apps.
+      <div className='bg-[#2a4942] rounded-md p-6 md:p-8  shadow-xl w-full lg:w-3/4'>
+        <h2 className='text-3xl text-[#3CCF91] mb-2 font-fira font-medium'>
+          About us
+        </h2>
+        <p className=' text-[white] text-[17px] sm:text-xl font-roboto font-normal'>
+          Hi, This is Mohammad Shahnawaz. A Software Engineer. I am passionate
+          about creating web applications and software because it provides me an
+          opportunities to learn and solve problems. And I am always excited to
+          explore new opportunities, expand my skill set, and take on projects
+          that challenge me to grow as a developer.
           <br /> <br />
-          Whenever i see some uinique Design then i start code it because during
-          the code we learn lots of things about packages, css, logic and etc.
-          <br />
-          <br />
-          Everything i learn about coding like Mern Stack, Python, Django, C++,
-          web development and app develpment by My Self.
+          As a Junior Developer, I'm eager to learn and collaborate with
+          experienced professionals to create efficient and innovative software
+          solutions. I'm proficient in languages like "JavaScript", "Reactjs",
+          "Typescript", "Nodejs" and "Python".
           <br />
         </p>
       </div>
