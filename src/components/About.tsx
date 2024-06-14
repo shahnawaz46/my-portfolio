@@ -27,10 +27,11 @@ const About = () => {
           explore new opportunities, expand my skill set, and take on projects
           that challenge me to grow as a developer.
           <br /> <br />
-          As a Junior Developer, I'm eager to learn and collaborate with
+          As a Junior Developer, I&apos;m eager to learn and collaborate with
           experienced professionals to create efficient and innovative software
-          solutions. I'm proficient in languages like "JavaScript", "Reactjs",
-          "Typescript", "Nodejs" and "Python".
+          solutions. Im&apos; proficient in languages like
+          &quot;JavaScript&quot;, &quot;Reactjs&quot;, &quot;Typescript&quot;,
+          &quot;Nodejs&quot; and &quot;Python&quot;.
           <br />
         </p>
       </div>
