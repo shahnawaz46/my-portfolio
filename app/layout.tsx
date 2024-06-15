@@ -30,10 +30,7 @@ export default function RootLayout({ children }: childrenProps) {
     <html lang='en' className={`${fira_code.variable} ${roboto.variable}`}>
       <body>
         <ReactParticle />
-        <ActiveSectionContextProvider>
-          <Navbar />
-          <main>{children}</main>
-        </ActiveSectionContextProvider>
+        {children}
       </body>
     </html>
   );

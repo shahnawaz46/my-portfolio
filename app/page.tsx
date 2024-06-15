@@ -1,20 +1,12 @@
-import React from "react";
-import Banner from "@/src/components/Banner";
-import About from "@/src/components/About";
-import Skills from "@/src/components/Skills";
-import Project from "@/src/components/Project";
-import Contact from "@/src/components/Contact";
+import React from 'react';
+import HomepageAnimation from '@/src/components/HomepageAnimation';
 
-const Home = () => {
+const Index = () => {
   return (
-    <>
-      <Banner />
-      <About />
-      <Skills />
-      <Project />
-      <Contact />
-    </>
+    <div className='relative h-screen w-full'>
+      <HomepageAnimation />
+    </div>
   );
 };
 
-export default Home;
+export default Index;

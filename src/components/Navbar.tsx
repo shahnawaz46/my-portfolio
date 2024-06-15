@@ -7,10 +7,12 @@ import { BiMenuAltRight } from 'react-icons/bi';
 import { motion } from 'framer-motion';
 import { navbarItems } from '../lib/data';
 import { useActiveSectionContext } from '../context/ActiveSectionContext';
+import { useRouter } from 'next/navigation';
 
 const Navbar = () => {
+  const router = useRouter();
   const { activeLink, setActiveLink } = useActiveSectionContext();
-  const [showNavbar, setShowNavbar] = useState(false);
+  const [showNavbar, setShowNavbar] = useState<boolean>(false);
 
   return (
     <motion.div
@@ -19,7 +21,10 @@ const Navbar = () => {
       className={`fixed top-0 z-20 w-full text-white bg-black bg-opacity-30 backdrop-blur-[3px] bottom-8
        flex justify-between items-center h-16 px-3 sm:p-5 md:px-12 lg:px-24`}
     >
-      <h1 className='text-3xl font-fira font-normal'>
+      <h1
+        className='text-3xl font-fira font-normal cursor-pointer'
+        onClick={() => router.push('/')}
+      >
         {' '}
         {/* &lt;Console.log()<span className='text-[#3CCF91]'>\</span>&gt;{' '} */}
         &lt;Portfolio<span className='text-[#3CCF91]'> / </span>
