@@ -1,9 +1,7 @@
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import ReactParticle from '@/src/components/ReactParticle';
-import Navbar from '@/src/components/Navbar';
 import { childrenProps } from '@/src/interfaces/Interface';
-import ActiveSectionContextProvider from '@/src/context/ActiveSectionContext';
 import { Fira_Code, Roboto } from 'next/font/google';
 
 const fira_code = Fira_Code({
@@ -21,8 +19,8 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: 'Shahnawaz',
-  description: 'This is my Protfolio Website',
+  title: 'Mohammad Shahnawaz',
+  description: 'This is my Portfolio Website',
 };
 
 export default function RootLayout({ children }: childrenProps) {

@@ -46,7 +46,8 @@ export const navbarItems = [
   { name: 'Home', link: '' },
   { name: 'About', link: '#about' },
   { name: 'Skills', link: '#skill' },
-  { name: 'Project', link: '#project' },
+  // { name: 'Experience', link: '#experience' },
+  { name: 'Projects', link: '#project' },
 ] as const;
 
 export const projectDetails = [
@@ -107,5 +108,46 @@ export const projectDetails = [
     stack: [{ id: 1, name: 'Mern Stack' }],
     about:
       "In this project, I'm creating a basic Music Player app using the MERN (MongoDB, Express.js, React.js, Node.js) stack. I'm utilizing my own API to manage song information, stored in the 'music-player-backend' repository.",
+  },
+] as const;
+
+export const experienceDetails = [
+  {
+    id: 1,
+    title: 'Frontend Developer Intern',
+    companyName: 'Nicheby Pvt Ltd',
+    date: 'December 2022 - May 2023',
+    location: 'Delhi, India',
+    tasks: [
+      {
+        id: 11,
+        description:
+          'Assisted in the development of Next.js-based projects, gaining hands-on experience in building dynamic and interactive web applications.',
+      },
+      {
+        id: 12,
+        description:
+          'Contributed to the optimization of web performance through efficient use of React components, state management, and server-side rendering techniques',
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: 'Frontend Developer Intern',
+    companyName: 'Nicheby Pvt Ltd',
+    date: 'December 2022 - May 2023',
+    location: 'Delhi, India',
+    tasks: [
+      {
+        id: 21,
+        description:
+          'Assisted in the development of Next.js-based projects, gaining hands-on experience in building dynamic and interactive web applications.',
+      },
+      {
+        id: 22,
+        description:
+          'Contributed to the optimization of web performance through efficient use of React components, state management, and server-side rendering techniques',
+      },
+    ],
   },
 ] as const;

@@ -30,7 +30,7 @@ const ProjectCard = ({
       ref={scrollRef}
       style={{ scale: scaleOpacityProgress, opacity: scaleOpacityProgress }}
     >
-      <div className='rounded-lg bg-[#080808] border border-[#333]'>
+      <div className='rounded-lg bg-[#080808] border border-[#333] h-full'>
         <img src={image} alt='project-image' className='rounded-t-lg' />
         <div className='px-3 pb-3'>
           <div className='pb-3'>

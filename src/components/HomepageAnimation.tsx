@@ -18,7 +18,7 @@ const HomepageAnimation = () => {
           type: 'spring',
           stiffness: 50,
         }}
-        onAnimationComplete={() => router.push('/home')}
+        onAnimationComplete={() => router.push('/')}
       >
         <span className='text-2xl sm:text-5xl font-fira font-bold'>&lt;</span>
       </motion.div>

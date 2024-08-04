@@ -23,7 +23,7 @@ const Navbar = () => {
     >
       <h1
         className='text-3xl font-fira font-normal cursor-pointer'
-        onClick={() => router.push('/')}
+        onClick={() => router.push('/portfolio')}
       >
         {' '}
         {/* &lt;Console.log()<span className='text-[#3CCF91]'>\</span>&gt;{' '} */}

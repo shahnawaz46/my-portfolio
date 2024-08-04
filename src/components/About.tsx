@@ -21,7 +21,11 @@ const About = () => {
           About us
         </h2>
         <p className=' text-[white] text-[17px] sm:text-xl font-roboto font-normal'>
-          Hi, This is Mohammad Shahnawaz. A Software Engineer. I am passionate
+          Hi, This is Mohammad Shahnawaz. A Software Engineer with over a year
+          of experience in frontend development and foundational backend
+          knowledge. Proficient in building responsive, user-friendly web
+          applications and collaborating effectively with development teams.
+          Committed to delivering innovative and high-quality. I am passionate
           about creating web applications and software because it provides me an
           opportunities to learn and solve problems. And I am always excited to
           explore new opportunities, expand my skill set, and take on projects

@@ -6,12 +6,15 @@ import { AiOutlineDownload } from 'react-icons/ai';
 import { FaDiscord } from 'react-icons/fa';
 import { IoMdCall } from 'react-icons/io';
 import Link from 'next/link';
-import TypeTextAnimation from './TypeTextAnimation';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
+import TypeTextAnimation from './TypeTextAnimation';
 import { useSectionInView } from '../lib/hooks';
 
 const Banner = () => {
   const { ref } = useSectionInView('Home');
+  const router = useRouter();
+
   return (
     <div className='h-screen' ref={ref}>
       <motion.div
@@ -23,7 +26,7 @@ const Banner = () => {
           type: 'spring',
           stiffness: 50,
         }}
-        className='absolute top-1/2 left-1/2  w-full text-center text-white px-3'
+        className='absolute top-1/2 left-1/2 w-full text-center text-white px-3'
       >
         <h1 className='text-3xl sm:text-4xl md:text-5xl mb-2 font-roboto font-semibold'>
           Hi I&apos;m <br className='sm:hidden' />
@@ -84,7 +87,10 @@ const Banner = () => {
         }}
         className='hidden fixed bottom-44 -right-32 rotate-90 text-white sm:flex items-center gap-4'
       >
-        <p className='text-lg font-roboto font-semibold'>
+        <p
+          className='text-lg font-roboto font-semibold cursor-pointer'
+          onClick={() => router.push('/email')}
+        >
           shahnawaz85748@gmail.com
         </p>
         <div className='w-20 h-[2px] bg-[#3CCF91]' />
