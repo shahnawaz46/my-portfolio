@@ -6,11 +6,11 @@ import SectionHeading from './SectionHeading';
 import SectionParagraph from './SectionParagraph';
 
 const Experience = () => {
-  const { ref } = useSectionInView('Experience');
+  // const { ref } = useSectionInView('Experience');
 
   return (
     <div
-      ref={ref}
+      // ref={ref}
       id='experience'
       className='scroll-m-16 relative text-white px-3 sm:px-16 w-full h-fit mt-20'
     >

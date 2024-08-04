@@ -45,9 +45,9 @@ export const skills = [
 export const navbarItems = [
   { name: 'Home', link: '' },
   { name: 'About', link: '#about' },
-  { name: 'Skills', link: '#skill' },
+  { name: 'Skills', link: '#skills' },
   // { name: 'Experience', link: '#experience' },
-  { name: 'Projects', link: '#project' },
+  { name: 'Projects', link: '#projects' },
 ] as const;
 
 export const projectDetails = [

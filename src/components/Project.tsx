@@ -9,12 +9,12 @@ import { projectDetails } from '../lib/data';
 import { useSectionInView } from '../lib/hooks';
 
 const Project = () => {
-  const { ref } = useSectionInView('Project');
+  const { ref } = useSectionInView('Projects');
 
   return (
     <div
       ref={ref}
-      id='project'
+      id='projects'
       className='scroll-m-16 relative text-white px-3 sm:px-16 w-full h-fit mt-20'
     >
       <SectionHeading>Projects</SectionHeading>

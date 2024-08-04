@@ -13,7 +13,7 @@ const Skills = () => {
   return (
     <div
       ref={ref}
-      id='skill'
+      id='skills'
       className='scroll-m-16 relative text-white px-3 sm:px-16 w-full h-full mt-20'
     >
       <SectionHeading>My Skills</SectionHeading>
